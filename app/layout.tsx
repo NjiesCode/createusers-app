@@ -1,6 +1,8 @@
 import './globals.css'
-import type { Metadata } from 'next'
+
 import { Inter } from 'next/font/google'
+import type { Metadata } from 'next'
+import QueryProver from './components/queryProvider/queryProvider'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -16,7 +18,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+
+        <QueryProver >
+        {children}
+        </QueryProver>
+        
+        </body>
     </html>
   )
 }
